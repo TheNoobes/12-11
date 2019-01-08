@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script type="text/javascript" src="wave.js"></script>
+</head>
+<body>
+    <section>
+
+        <div class="row">
+            <div class="col-sm-12"><br><br>
+                <center>
+                    <span style="font-family: algerian">COCA COLA ONLINE VENDO</span>
+                </center><br><br>
+            </div>
+        </div>
+
+        <div class="row">
+
+
+            <div class="col-sm-12">
+                <center>
+                    <span style="font-family: algerian">Amount: <input type="text" id="value"></span>
+                </center>
+            </div>
+        </div> <br><br>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <center>
+                    <input style="font-family: verdana" type="button" class="btn btn-success button1" value="350ml" onclick="first()">
+                </center>
+            </div>
+            <div class="col-sm-4">
+                <center>
+                    <input style="font-family: verdana" type="button" class="btn btn-warning button1" value="450ml" onclick="second()">
+                </center>
+            </div>
+            <div class="col-sm-4">
+                <center>
+                    <input style="font-family: verdana" type="button" class="btn btn-success button1" value="750ml" onclick="third()">
+                </center>
+            </div>
+        </div><br><br>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <center>
+                    <h3 style="font-family: algerian" id="change">Result</h3>
+                </center>
+            </div>
+        </div>
+
+        <div class="wave"></div>
+
+    </section>
+    <script type="text/javascript">
+        function first()
+{
+    var k=document.getElementById('value').value;
+    k=Number(k);
+    if ((k>=25)==true)
+    {
+        var b=k-25;
+        document.getElementById('change').innerHTML="Thank you for buying  and here's your change: "+b;
+        alert('enjoy your coke')
+    }
+    else
+    {
+        var b=25-k;
+        alert('Your amount is not sufficient');
+        document.getElementById('change').innerHTML="Your money needs "+b+" more to avail this one";
+    }
+}
+function second()
+{
+    var k=document.getElementById('value').value;
+    k=Number(k);
+    if ((k>=30)==true)
+    {
+        var b=k-30;
+        document.getElementById('change').innerHTML="Thank you for buying  and here's your change: "+b;
+        alert('Enjoy  Your Coke ')
+    }
+    else
+    {
+        var b=30-k;
+        alert('Your amount is not sufficient');
+        document.getElementById('change').innerHTML="Your money needs "+b+" more to avail this one";
+    }
+}
+function third()
+{
+    var k=document.getElementById('value').value;
+    k=Number(k);
+    if ((k>=50)==true)
+    {
+        var b=k-50;
+        document.getElementById('change').innerHTML="Thank you for buying and here's your change: "+b;
+        alert('Enjoy  Your Coke ')
+    }
+    else
+    {
+        var b=50-k;
+        alert('Your amount is not sufficient');
+        document.getElementById('change').innerHTML="Your money needs "+b+" more to avail this one";
+    }
+}
+    </script>
+</body>
+</html>
